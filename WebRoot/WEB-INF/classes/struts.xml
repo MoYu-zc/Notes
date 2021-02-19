@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 第4步，在struts.xml里面配置action -->
+	<package name="default" extends="struts-default">
+		<!-- class属性要等于Spring容器里面的action的id -->
+		<action name="user_*" class="userAction" method="{1}">
+			<result name="login">/manage/login.jsp</result>
+			<result name="userinfo">/userinfo.jsp</result>
+			<result name="success">/manage/user_list.jsp</result>
+			<result name="list" type="redirect">/user_list.action</result>
+			<result name="updatepwd">/manage/updatepwd.jsp</result>
+		</action>
+		<action name="docs_*" class="docsAction" method="{1}">
+			<result name="index">/index.jsp</result>
+			<result name="detail">/detail.jsp</result>
+			<result name="update">/docupdate.jsp</result>
+			<result name="mylist">/mylist.jsp</result>
+			<result name="success">/manage/docs_list.jsp</result>
+			<result name="list" type="redirect">/docs_list.action</result>
+			<result name="tomylist" type="redirect">/docs_mylist.action</result>
+			<!-- 下载配置 -->	
+			<result name="download" type="stream">
+				<!-- 下载的文件类型 -->
+				<param name="contentType">application/octet-stream</param>
+				<!-- 下载时使用的文件流 -->
+				<param name="inputName">inputStream</param>
+				<!-- 下载时弹出的文件名是 ${filename}要跟filename属性名称一致-->
+				<param name="contentDisposition">attachement;filename=${filename}</param>
+				<!-- 缓存大小 -->
+				<param name="bufferSize">4096</param>
+			</result>
+		</action>
+		
+		<action name="tags_*" class="tagsAction" method="{1}">
+			<result name="success">/manage/tags_list.jsp</result>
+			<result name="list" type="redirect">/tags_list.action</result>
+		</action>
+		
+		<action name="upload" class="uploadAction" method="upload">
+        </action>
+	</package>
+</struts>

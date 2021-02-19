@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//src/cn/dao/CompanyDao.java=UTF-8
+encoding//src/cn/dao/DocsDao.java=UTF-8
+encoding//src/cn/dao/JobDao.java=UTF-8
+encoding//src/cn/dao/PostDao.java=UTF-8
+encoding//src/cn/dao/ProtocolDao.java=UTF-8
+encoding//src/cn/dao/QingjiaDao.java=UTF-8
+encoding//src/cn/dao/TagsDao.java=UTF-8
+encoding//src/cn/dao/TeacherDao.java=UTF-8
+encoding//src/cn/dao/UserDao.java=UTF-8
+encoding//src/cn/dao/zhongheDao.java=UTF-8
+encoding//src/cn/entity/Docs.java=UTF-8
+encoding//src/cn/util/ResponseCode.java=UTF-8
+encoding//src/cn/util/ServerResponse.java=UTF-8
